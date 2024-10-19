@@ -12,6 +12,7 @@ namespace Chess.View.Converters
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Windows;
     using System.Windows.Data;
     using System.Windows.Media.Imaging;
     using Chess.Model.Elements.ChessPieces;
@@ -41,8 +42,11 @@ namespace Chess.View.Converters
         /// </returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            try
-            {
+                if(values.Count() < 2 || values[0] == DependencyProperty.UnsetValue || values[1] == DependencyProperty.UnsetValue)
+                {
+                    return string.Empty;
+                }
+
                 ChessPieceType pieceType = (ChessPieceType)values[0];
                 ChessPieceTeam pieceTeam = (ChessPieceTeam)values[1];
 
@@ -93,11 +97,8 @@ namespace Chess.View.Converters
                     default:
                         break;
                 }
-            }
-            catch (Exception)
-            {
-                return string.Empty;
-            }
+            
+            
 
             return string.Empty;
         }

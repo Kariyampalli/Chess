@@ -204,7 +204,7 @@ namespace Chess.Model.Elements.ChessPieces
         }
 
         /// <summary>
-        /// The second clause checks if the king can move, else it checkmate.
+        /// The second clause checks if the king can move, else it's checkmate.
         /// </summary>
         /// <returns>
         /// Returns a boolean indicating if king is checkmated.

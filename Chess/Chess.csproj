@@ -82,6 +82,7 @@
     <Compile Include="ViewModel\BeatenPiecesVM.cs" />
     <Compile Include="ViewModel\DimensionsVM.cs" />
     <Compile Include="ViewModel\ChessBoardFieldVM.cs" />
+    <Compile Include="ViewModel\MessageBoxVM.cs" />
     <Compile Include="ViewModel\PlayedGamesBoxVM.cs" />
     <Compile Include="ViewModel\PlayedRoundVM.cs" />
     <Compile Include="ViewModel\CurrentRoundVM.cs" />
@@ -100,6 +101,9 @@
     <Compile Include="ViewModel\DistanceVM.cs" />
     <Compile Include="View\Converters\BackgroundFieldColorConverter.cs" />
     <Compile Include="ViewModel\ChessBoardVM.cs" />
+    <Compile Include="View\MessageboxView.xaml.cs">
+      <DependentUpon>MessageboxView.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\ChessBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\MessageboxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

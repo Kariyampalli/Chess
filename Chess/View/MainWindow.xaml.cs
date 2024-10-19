@@ -6,6 +6,7 @@
 //// </summary>
 namespace Chess.View
 {
+    using Chess.ViewModel;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -32,6 +33,17 @@ namespace Chess.View
         public MainWindow()
         {
             this.InitializeComponent();
+        }
+
+
+        public void DisplayMessageView(string message)
+        {
+            MessageboxView messageboxView = new MessageboxView
+            {
+                DataContext = new MessageBoxVM(message) // Setze das DataContext auf das ViewModel
+            };
+
+            MainGrid.Children.Add(messageboxView); // Füge das EventView zur MainGrid hinzu
         }
     }
 }

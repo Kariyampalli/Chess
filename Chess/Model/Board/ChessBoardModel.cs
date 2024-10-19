@@ -378,6 +378,10 @@ namespace Chess.Model.Board
                 if (enumerator.Current.Piece != null && enumerator.Current.Piece.PieceType == ChessPieceType.King)
                 {
                     isCheckMate = enumerator.Current.Piece.Accept(this.checkMateVisitor);
+                    if (isCheckMate)
+                    {
+                        return isCheckMate;
+                    }
                 }
             }
 

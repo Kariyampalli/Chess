@@ -62,7 +62,15 @@ namespace Chess.View
         /// </param>
         private void DisplayMessage(object sender, OnDisplayGameMessageEventArgs args)
         {
-            MessageBox.Show(args.Message);
+            if(args.MessageType == GameMessageType.Game)
+            {
+                MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+                mainWindow.DisplayMessageView(args.Message);
+            }
+            else
+            {
+                MessageBox.Show(args.Message);
+            }       
         }
     }
 }
