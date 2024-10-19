@@ -2,6 +2,8 @@
 
 A standard 8x8 chess game built using C#/WPF (.NET Framework 4.7.2).
 
+To play the game simply go to `Chess\bin\Debug` and execute `Chess.exe`.
+
 ## Rules
 
 The game follows standard chess rules (see [Rules of Chess on Wikipedia](https://en.wikipedia.org/wiki/Rules_of_chess)).
